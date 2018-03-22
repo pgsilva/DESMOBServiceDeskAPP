@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Aula03</string>
+    <string name="buscar_fila">Fila Solucionadora</string>
+    <string name="botao_buscar">Buscar</string>
+</resources>
