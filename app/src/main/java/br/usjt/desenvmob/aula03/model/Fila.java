@@ -9,10 +9,12 @@ import java.io.Serializable;
 class Fila implements Serializable {
     private int id;
     private String nome;
+    private String figura;
 
-    public Fila(int id, String nome) {
+    public Fila(int id, String nome, String figura) {
         this.id = id;
         this.nome = nome;
+        this.figura = figura;
     }
 
     public Fila(){
@@ -35,11 +37,20 @@ class Fila implements Serializable {
         this.nome = nome;
     }
 
+    public String getFigura() {
+        return figura;
+    }
+
+    public void setFigura(String figura) {
+        this.figura = figura;
+    }
+
     @Override
     public String toString() {
         return "Fila{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
+                ", figura='" + figura + '\'' +
                 '}';
     }
 }

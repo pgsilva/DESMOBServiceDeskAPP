@@ -44,18 +44,28 @@ public class ChamadoAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View contentView, ViewGroup parent) {
         View view = null;
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        view = inflater.inflate(R.layout.linha_chamado, parent, false);
-        ImageView imageView  = (ImageView) view.findViewById(R.id.imagem_fila);
-        TextView numero = (TextView) view.findViewById(R.id.numero_status_chamado);
-        TextView datas = (TextView) view.findViewById(R.id.abertura_fechamento_chamado);
-        TextView descricao = (TextView) view.findViewById(R.id.descricao_chamado);
+            if(view == null) {
+                LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                view = inflater.inflate(R.layout.linha_chamado, parent, false);
+                ImageView figura  = (ImageView) view.findViewById(R.id.imagem_fila);
+                TextView numero = (TextView) view.findViewById(R.id.numero_status_chamado);
+                TextView datas = (TextView) view.findViewById(R.id.abertura_fechamento_chamado);
+                TextView descricao = (TextView) view.findViewById(R.id.descricao_chamado);
+                ViewHolder v = new ViewHolder();
+                v.setData(datas);
+                v.setDescricao(descricao);
+                v.setImagem(figura);
+                v.setNumero(numero);
+            }
+
 
         Chamado chamado = chamados.get(position);
+        ViewHolder v = (ViewHolder) view.getTag();
 
-        numero.setText(String.format("numero: %d - status: %s", chamado.getNumero(), chamado.getStatus()));
-        datas.setText(String.format("abertura: %tD - fechamento: %tD", chamado.getDataAbertura(), chamado.getDataFechamento()));
-        descricao.setText(chamado.getDescricao());
+        v.getImagem().setImageDrawable(Util.getDrawableDinamic(context, chamado.getFila().getFigura()));
+        v.getNumero().setText(String.format("numero: %d - status: %s", chamado.getNumero(), chamado.getStatus()));
+        v.getData().setText(String.format("abertura: %tD - fechamento: %tD", chamado.getDataAbertura(), chamado.getDataFechamento()));
+        v.getDescricao().setText(chamado.getDescricao());
 
         return view;
     }

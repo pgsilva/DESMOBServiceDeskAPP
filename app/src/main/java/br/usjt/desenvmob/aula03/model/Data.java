@@ -20,6 +20,7 @@ public class Data {
         Fila fila = new Fila();
         fila.setId(FilaId.DESKTOPS.id());
         fila.setNome(FilaId.DESKTOPS.nome());
+        fila.setFigura(FilaId.DESKTOPS.figura());
         chamado.setFila(fila);
         lista.add(chamado);
 
@@ -32,8 +33,9 @@ public class Data {
         Fila fila2 = new Fila();
         fila.setId(FilaId.TELEFONIA.id());
         fila.setNome(FilaId.TELEFONIA.nome());
-        chamado.setFila(fila);
-        lista.add(chamado);
+        fila.setFigura(FilaId.TELEFONIA.figura());
+        chamado.setFila(fila2);
+        lista.add(chamado2);
 
         Chamado chamado3 = new Chamado();
         chamado.setNumero(3);
@@ -44,8 +46,9 @@ public class Data {
         Fila fila3 = new Fila();
         fila.setId(FilaId.REDES.id());
         fila.setNome(FilaId.REDES.nome());
-        chamado.setFila(fila);
-        lista.add(chamado);
+        fila.setFigura(FilaId.REDES.figura());
+        chamado.setFila(fila3);
+        lista.add(chamado3);
 
         Chamado chamado4 = new Chamado();
         chamado.setNumero(4);
@@ -56,8 +59,9 @@ public class Data {
         Fila fila4 = new Fila();
         fila.setId(FilaId.SERVIDORES.id());
         fila.setNome(FilaId.SERVIDORES.nome());
-        chamado.setFila(fila);
-        lista.add(chamado);
+        fila.setFigura(FilaId.SERVIDORES.figura());
+        chamado.setFila(fila4);
+        lista.add(chamado4);
 
         Chamado chamado5 = new Chamado();
         chamado.setNumero(5);
@@ -68,8 +72,9 @@ public class Data {
         Fila fila5 = new Fila();
         fila.setId(FilaId.PROJETO.id());
         fila.setNome(FilaId.PROJETO.nome());
-        chamado.setFila(fila);
-        lista.add(chamado);
+        fila.setFigura(FilaId.PROJETO.figura());
+        chamado.setFila(fila5);
+        lista.add(chamado5);
 
         Chamado chamado6 = new Chamado();
         chamado.setNumero(6);
@@ -80,8 +85,9 @@ public class Data {
         Fila fila6 = new Fila();
         fila.setId(FilaId.ERP.id());
         fila.setNome(FilaId.ERP.nome());
-        chamado.setFila(fila);
-        lista.add(chamado);
+        fila.setFigura(FilaId.ERP.figura());
+        chamado.setFila(fila6);
+        lista.add(chamado6);
 
         Chamado chamado7 = new Chamado();
         chamado.setNumero(7);
@@ -92,8 +98,9 @@ public class Data {
         Fila fila7 = new Fila();
         fila.setId(FilaId.PROJETO.id());
         fila.setNome(FilaId.PROJETO.nome());
-        chamado.setFila(fila);
-        lista.add(chamado);
+        fila.setFigura(FilaId.PROJETO.figura());
+        chamado.setFila(fila7);
+        lista.add(chamado7);
 
         Chamado chamado8 = new Chamado();
         chamado.setNumero(8);
@@ -104,8 +111,9 @@ public class Data {
         Fila fila8 = new Fila();
         fila.setId(FilaId.VENDAS.id());
         fila.setNome(FilaId.VENDAS.nome());
-        chamado.setFila(fila);
-        lista.add(chamado);
+        fila.setFigura(FilaId.VENDAS.figura());
+        chamado.setFila(fila8);
+        lista.add(chamado8);
 
         Chamado chamado9 = new Chamado();
         chamado.setNumero(9);
@@ -116,8 +124,9 @@ public class Data {
         Fila fila9 = new Fila();
         fila.setId(FilaId.ERP.id());
         fila.setNome(FilaId.ERP.nome());
-        chamado.setFila(fila);
-        lista.add(chamado);
+        fila.setFigura(FilaId.ERP.figura());
+        chamado.setFila(fila9);
+        lista.add(chamado9);
 
         Chamado chamado10 = new Chamado();
         chamado.setNumero(10);
@@ -128,8 +137,9 @@ public class Data {
         Fila fila10 = new Fila();
         fila.setId(FilaId.PROJETO.id());
         fila.setNome(FilaId.PROJETO.nome());
-        chamado.setFila(fila);
-        lista.add(chamado);
+        fila.setFigura(FilaId.PROJETO.figura());
+        chamado.setFila(fila10);
+        lista.add(chamado10);
 
         Chamado chamado11 = new Chamado();
         chamado.setNumero(11);
@@ -140,8 +150,9 @@ public class Data {
         Fila fila11 = new Fila();
         fila.setId(FilaId.PROJETO.id());
         fila.setNome(FilaId.PROJETO.nome());
-        chamado.setFila(fila);
-        lista.add(chamado);
+        fila.setFigura(FilaId.PROJETO.figura());
+        chamado.setFila(fila11);
+        lista.add(chamado11);
 
         Chamado chamado12 = new Chamado();
         chamado.setNumero(12);
@@ -152,8 +163,9 @@ public class Data {
         Fila fila12 = new Fila();
         fila.setId(FilaId.REDES.id());
         fila.setNome(FilaId.REDES.nome());
-        chamado.setFila(fila);
-        lista.add(chamado);
+        fila.setFigura(FilaId.REDES.figura());
+        chamado.setFila(fila12);
+        lista.add(chamado12);
 
         Chamado chamado13 = new Chamado();
         chamado.setNumero(13);
@@ -164,8 +176,9 @@ public class Data {
         Fila fila13 = new Fila();
         fila.setId(FilaId.PROJETO.id());
         fila.setNome(FilaId.PROJETO.nome());
-        chamado.setFila(fila);
-        lista.add(chamado);
+        fila.setFigura(FilaId.PROJETO.figura());
+        chamado.setFila(fila13);
+        lista.add(chamado13);
 
         Chamado chamado14 = new Chamado();
         chamado.setNumero(14);
@@ -176,8 +189,9 @@ public class Data {
         Fila fila14 = new Fila();
         fila.setId(FilaId.DESKTOPS.id());
         fila.setNome(FilaId.DESKTOPS.nome());
-        chamado.setFila(fila);
-        lista.add(chamado);
+        fila.setFigura(FilaId.DESKTOPS.figura());
+        chamado.setFila(fila14);
+        lista.add(chamado14);
 
         Chamado chamado15 = new Chamado();
         chamado.setNumero(15);
@@ -188,8 +202,9 @@ public class Data {
         Fila fila15 = new Fila();
         fila.setId(FilaId.DESKTOPS.id());
         fila.setNome(FilaId.DESKTOPS.nome());
-        chamado.setFila(fila);
-        lista.add(chamado);
+        fila.setFigura(FilaId.DESKTOPS.figura());
+        chamado.setFila(fila15);
+        lista.add(chamado15);
 
         Chamado chamado16 = new Chamado();
         chamado.setNumero(16);
@@ -200,8 +215,9 @@ public class Data {
         Fila fila16 = new Fila();
         fila.setId(FilaId.PROJETO.id());
         fila.setNome(FilaId.PROJETO.nome());
-        chamado.setFila(fila);
-        lista.add(chamado);
+        fila.setFigura(FilaId.PROJETO.figura());
+        chamado.setFila(fila16);
+        lista.add(chamado16);
 
         Chamado chamado17 = new Chamado();
         chamado.setNumero(17);
@@ -212,8 +228,9 @@ public class Data {
         Fila fila17 = new Fila();
         fila.setId(FilaId.TELEFONIA.id());
         fila.setNome(FilaId.TELEFONIA.nome());
-        chamado.setFila(fila);
-        lista.add(chamado);
+        fila.setFigura(FilaId.TELEFONIA.figura());
+        chamado.setFila(fila17);
+        lista.add(chamado17);
 
         Chamado chamado18 = new Chamado();
         chamado.setNumero(18);
@@ -224,8 +241,9 @@ public class Data {
         Fila fila18 = new Fila();
         fila.setId(FilaId.TELEFONIA.id());
         fila.setNome(FilaId.TELEFONIA.nome());
-        chamado.setFila(fila);
-        lista.add(chamado);
+        fila.setFigura(FilaId.TELEFONIA.figura());
+        chamado.setFila(fila18);
+        lista.add(chamado18);
 
         Chamado chamado19 = new Chamado();
         chamado.setNumero(19);
@@ -236,8 +254,9 @@ public class Data {
         Fila fila19 = new Fila();
         fila.setId(FilaId.REDES.id());
         fila.setNome(FilaId.REDES.nome());
-        chamado.setFila(fila);
-        lista.add(chamado);
+        fila.setFigura(FilaId.REDES.figura());
+        chamado.setFila(fila19);
+        lista.add(chamado19);
 
         Chamado chamad20 = new Chamado();
         chamado.setNumero(20);
@@ -248,8 +267,9 @@ public class Data {
         Fila fila20 = new Fila();
         fila.setId(FilaId.PROJETO.id());
         fila.setNome(FilaId.PROJETO.nome());
-        chamado.setFila(fila);
-        lista.add(chamado);
+        fila.setFigura(FilaId.PROJETO.figura());
+        chamado.setFila(fila20);
+        lista.add(chamad20);
 
         return lista;
     }

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import br.usjt.desenvmob.aula03.R;
+import br.usjt.desenvmob.aula03.model.Chamado;
 
 public class DetalheChamadoActivity extends Activity {
 
@@ -17,7 +18,7 @@ public class DetalheChamadoActivity extends Activity {
         setContentView(R.layout.activity_detalhe_chamado);
         txtNome = (TextView) findViewById(R.id.chamado_nome);
         Intent intent = getIntent();
-        String nome = intent.getStringExtra(ListarChamadosActivity.CHAMADO);
-        txtNome.setText(nome);
+        Chamado ch =(Chamado)intent.getSerializableExtra(ListarChamadosActivity.CHAMADO);
+        txtNome.setText(ch.getDescricao());
     }
 }
