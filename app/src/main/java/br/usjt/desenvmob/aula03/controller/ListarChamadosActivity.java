@@ -9,11 +9,13 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import br.usjt.desenvmob.aula03.R;
 import br.usjt.desenvmob.aula03.model.Chamado;
 import br.usjt.desenvmob.aula03.model.ChamadoAdapter;
+import br.usjt.desenvmob.aula03.model.ChamadoNetwork;
 import br.usjt.desenvmob.aula03.model.Data;
 
 public class ListarChamadosActivity extends Activity{
@@ -28,8 +30,15 @@ public class ListarChamadosActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_chamados);
         final Intent intent = getIntent();
-        String nomeFila = intent.getStringExtra(MainActivity.FILA);
-        chamados = Data.buscarChamados(nomeFila);
+        chamados =(ArrayList<Chamado>)intent.getSerializableExtra(MainActivity.CHAMADO);
+
+        /*
+             String nomeFila = intent.getStringExtra(MainActivity.FILA);
+            try {
+            chamados = ChamadoNetwork.buscarChamados("http://10.0.2.2:8080/arqsw_sdesk_a4_remasterized/rest/chamados");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
         listView = (ListView) findViewById(R.id.lista_chamados);
         ChamadoAdapter adapter = new ChamadoAdapter(this, chamados);
         listView.setAdapter(adapter);
