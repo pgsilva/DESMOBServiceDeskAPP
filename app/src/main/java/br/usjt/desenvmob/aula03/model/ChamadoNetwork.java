@@ -43,7 +43,7 @@ public class ChamadoNetwork {
                 chamado.setStatus(item.getString("status"));
                 String sDataAbertura = (item.getString("dataAbertura"));
                 String sDataFechamento = (item.getString("dataFechamento"));
-                try {
+               /* try {
                     chamado.setDataAbertura((Date)formater.parse(sDataAbertura));
                 } catch (ParseException e) {
                     e.printStackTrace();
@@ -52,12 +52,19 @@ public class ChamadoNetwork {
                     chamado.setDataFechamento((Date)formater.parse(sDataFechamento));
                 } catch (ParseException e) {
                     e.printStackTrace();
-                }
+                }*/
+               chamado.setDataAbertura(new Date());
+               chamado.setDataFechamento(new Date());
                 JSONObject filaitem = item.getJSONObject("fila");
                 Fila fila = new Fila();
                 fila.setId((filaitem.getInt("id")));
                 fila.setNome((filaitem.getString("nome")));
-                fila.setFigura((filaitem.getString("nm_figura")));
+                try {
+                    fila.setFigura((filaitem.getString("nm_figura")));
+                }catch(Exception e){
+                    fila.setFigura("ic_erp");
+                    e.printStackTrace();
+                }
                 chamado.setFila(fila);
                 chamados.add(chamado);
             }

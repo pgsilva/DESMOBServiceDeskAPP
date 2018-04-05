@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
 
     public void buscarChamados(View view) {
         String fila = txtFila.getText().toString();
-        new DownloadJSONChamado().execute("http://10.0.2.2:8080/arqsw_sdesk_a4_remasterized/rest/chamados");
+        new DownloadJSONChamado().execute("http://10.71.4.169:8080/arqsw_sdesk_a2/rest/chamados");
        /* Intent intent = new Intent(this, ListarChamadosActivity.class);
         intent.putExtra(CHAMADO, fila);
         startActivity(intent);*/
@@ -43,7 +43,7 @@ public class MainActivity extends Activity {
             ArrayList<Chamado> chamados = new ArrayList<>();
 
             try {
-                chamados =ChamadoNetwork.buscarChamados("http://10.0.2.2:8080/arqsw_sdesk_a4_remasterized/rest/chamados");
+                chamados =ChamadoNetwork.buscarChamados("http://10.71.4.169:8080/arqsw_sdesk_a2/rest/chamados");
             } catch (IOException e) {
                 e.printStackTrace();
             }
