@@ -1,15 +1,18 @@
 package br.usjt.desenvmob.aula03.model;
 
+import android.graphics.Bitmap;
+
 import java.io.Serializable;
 
 /**
  * Created by arqdsis on 21/03/2018.
  */
 
-class Fila implements Serializable {
+public class Fila implements Serializable {
     private int id;
     private String nome;
     private String figura;
+    private Bitmap imagem;
 
     public Fila(int id, String nome, String figura) {
         this.id = id;
@@ -43,6 +46,14 @@ class Fila implements Serializable {
 
     public void setFigura(String figura) {
         this.figura = figura;
+    }
+
+    public Bitmap getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(Bitmap imagem) {
+        this.imagem = imagem;
     }
 
     @Override
